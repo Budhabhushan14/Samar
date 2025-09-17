@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Website</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav id="navbar">
+    <div id="shopname"><h1>AJIT BANK SERVICES</h1></div>
+    <ul>
+      <li class="item"><a href="#Home">Home</a></li>
+      <li class="item"><a href="#Services-container">Services</a></li>
+      <li class="item"><a href="#Contact">Contact</a></li>
+      <li class="item"><a href="/login">Admin Login</a></li>
+    </ul>
+  </nav>
+
+  <section id="Home">
+    <h1>Welcome to AJIT BANK SERVICES</h1>
+    <h2>आपल्याला ऑनलाइन बँकिंग सेवा घरबसल्या मिळवा</h2>
+  </section>
+
+  <section id="Services-container">
+    <h1 class="h-primary center">Available Services</h1>
+    <div id="Services">
+      <% if (services.length > 0) { %>
+        <% services.forEach(service => { %>
+          <div class="box">
+            <h2><%= service.name %></h2>
+            <p><%= service.description %></p>
+          </div>
+        <% }) %>
+      <% } else { %>
+        <p>No services added yet.</p>
+      <% } %>
+    </div>
+  </section>
+
+  <section id="Contact">
+    <h1>Contact Me</h1>
+    <h2>NAME: UJAGARE AJIT <br>PHONE: 9359490401 <br>Email: ajitujgare07@gmail.com</h2>
+  </section>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>
